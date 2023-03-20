@@ -1,0 +1,96 @@
+.dropdown {
+  margin-top: 17px;
+  margin-bottom: 24px;
+  width: 285px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  height: 100%;
+  text-align: left;
+  transition: 0.13s;
+  outline: 1px solid #000000;
+  &.active {
+    margin-bottom: 90px;
+  }
+  .select {
+    cursor: pointer;
+    display: block;
+    padding: 12px 10px;
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+
+    /* Gray / 600 */
+
+    color: #475467;
+    position: relative;
+
+    & > .icon {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      display: inline-block;
+      background-image: url(../../assets/icons/up-icon.svg);
+
+      color: #888;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+  &:active {
+    background-color: #f8f8f8;
+  }
+  &.active:hover,
+  &.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8;
+  }
+  &.active .select > .icon {
+    transform: rotate(-180deg);
+  }
+  .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9;
+    padding: 0;
+    list-style: none;
+    outline: 1px solid #000000;
+    li {
+      padding: 10px;
+      transition: 0.13s;
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      font-feature-settings: "calt" off;
+      &:hover {
+        background-color: #7f56d9;
+        color: #fff;
+      }
+      &:active {
+        background-color: #e2e2e2;
+      }
+    }
+  }
+}
